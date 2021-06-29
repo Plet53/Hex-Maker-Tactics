@@ -314,7 +314,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -326,7 +326,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -535,7 +535,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: save
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -693,7 +693,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: loadAProject
+        m_MethodName: LoadAProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1113,7 +1113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &93213637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1576,8 +1576,8 @@ RectTransform:
   m_Father: {fileID: 1348972980}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2352,7 +2352,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setB
+        m_MethodName: SetB
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2364,7 +2364,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateColor
+        m_MethodName: UpdateColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3017,7 +3017,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: cancelsave
+        m_MethodName: CancelSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3284,7 +3284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &235472651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3651,8 +3651,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1523398574}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: setXLen
+        m_TargetAssemblyTypeName: MapGenerator, Assembly-CSharp
+        m_MethodName: SetXLen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4292,7 +4292,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setTexName
+        m_MethodName: set_texname
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4540,7 +4540,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4552,7 +4552,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4783,7 +4783,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5468,7 +5468,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: nameMap
+        m_MethodName: NameMap
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5641,7 +5641,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5653,7 +5653,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5964,7 +5964,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setA
+        m_MethodName: SetA
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5976,7 +5976,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateColor
+        m_MethodName: UpdateColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6147,7 +6147,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: newPaint
+        m_MethodName: NewPaint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6371,7 +6371,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6383,7 +6383,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6465,7 +6465,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6593,7 +6593,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: save
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6756,7 +6756,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7468,7 +7468,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7717,7 +7717,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setCreateTool
+        m_MethodName: SetCreateTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8473,7 +8473,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setCurrMap
+        m_MethodName: SetCurrMap
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8538,7 +8538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &614365327
 Camera:
   m_ObjectHideFlags: 0
@@ -8763,7 +8763,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setG
+        m_MethodName: SetG
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8775,7 +8775,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateColor
+        m_MethodName: UpdateColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8845,8 +8845,6 @@ MonoBehaviour:
   canvtogrid: 0
   camangleadjust: 0
   rad: 0
-  flag: 0
-  currMap: 0
   newX: 0
   newZ: 0
   d: 0
@@ -8862,8 +8860,6 @@ MonoBehaviour:
   namebox: {fileID: 334874838}
   bartext: {fileID: 1424965649}
   newmenutext: {fileID: 767623802}
-  filename: 
-  texname: 
 --- !u!4 &626442520
 Transform:
   m_ObjectHideFlags: 0
@@ -8966,7 +8962,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: dontsave
+        m_MethodName: DontSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9120,7 +9116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &654652214
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9938,7 +9934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &706885740
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11209,7 +11205,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setwm
+        m_MethodName: SetWM
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12288,7 +12284,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12300,7 +12296,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12554,7 +12550,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setPaintTool
+        m_MethodName: SetPaintTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12858,7 +12854,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12870,7 +12866,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13124,7 +13120,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setSelTool
+        m_MethodName: SetSelTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13276,7 +13272,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: openFile
+        m_MethodName: OpenTexture
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13745,7 +13741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &973261384
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14033,7 +14029,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14090,7 +14086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1008560368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14474,7 +14470,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15352,7 +15348,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setRadTool
+        m_MethodName: SetRadTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16050,7 +16046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1174030669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16273,7 +16269,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setHeightTool
+        m_MethodName: SetHeightTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16683,8 +16679,8 @@ RectTransform:
   m_Father: {fileID: 1101908241}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16875,7 +16871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1260101857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16981,7 +16977,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: loadAMap
+        m_MethodName: LoadAMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17173,7 +17169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1295526022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17509,7 +17505,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: newProject
+        m_MethodName: NewProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17825,7 +17821,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: acceptPaint
+        m_MethodName: AcceptPaint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18143,7 +18139,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setnewpl
+        m_MethodName: SetNewPL
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18295,8 +18291,8 @@ RectTransform:
   m_Father: {fileID: 1928508591}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18441,7 +18437,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setNewZ
+        m_MethodName: SetNewZ
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18618,7 +18614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1385796336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18779,7 +18775,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: newMap
+        m_MethodName: NewMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19130,6 +19126,10 @@ MonoBehaviour:
   hextile: {fileID: 2912432678412429629, guid: bf2483af5094f684daed722e5eff74b4, type: 3}
   loadmenu: {fileID: 1030805234}
   bmat: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  xShift: 0
+  xPos: 0
+  zShift: 0
+  zPos: 0
   e: {fileID: 626442519}
 --- !u!1 &1401125036
 GameObject:
@@ -19439,7 +19439,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: loadProject
+        m_MethodName: LoadProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19671,7 +19671,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: openFile
+        m_MethodName: OpenTexture
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19939,7 +19939,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: SetFilename
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20676,7 +20676,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setR
+        m_MethodName: SetR
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20688,7 +20688,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateColor
+        m_MethodName: UpdateColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21532,7 +21532,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setRectTool
+        m_MethodName: SetRectTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21679,8 +21679,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1523398574}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: setZLen
+        m_TargetAssemblyTypeName: MapGenerator, Assembly-CSharp
+        m_MethodName: SetZLen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21768,8 +21768,8 @@ RectTransform:
   m_Father: {fileID: 740868983}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21840,11 +21840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6088989f1013b144da65844bfca73796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xLen: 9
-  zLen: 9
   hexTile: {fileID: 2912432678412429629, guid: bf2483af5094f684daed722e5eff74b4, type: 3}
   genMenu: {fileID: 1497020740}
-  editor: {fileID: 626442518}
   e: {fileID: 626442519}
 --- !u!4 &1523398575
 Transform:
@@ -21877,7 +21874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1530849508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22106,7 +22103,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: cancelPaint
+        m_MethodName: CancelPaint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22255,7 +22252,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22267,7 +22264,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22546,7 +22543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1572633668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22697,7 +22694,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: pickFlag
+        m_MethodName: set_flag
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22709,7 +22706,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setFlag
+        m_MethodName: SetFlag
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23282,7 +23279,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setPointTool
+        m_MethodName: SetPointTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23934,7 +23931,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24484,7 +24481,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setEraserTool
+        m_MethodName: SetEraserTool
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24618,7 +24615,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: loadMap
+        m_MethodName: LoadMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25556,7 +25553,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateProject
+        m_MethodName: UpdateProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25689,7 +25686,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: returntoMenu
+        m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25818,7 +25815,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -25963,7 +25960,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setNewX
+        m_MethodName: SetNewX
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26262,7 +26259,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1994518945}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
-        m_MethodName: setFS
+        m_MethodName: SetFS
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27338,7 +27335,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateMap
+        m_MethodName: UpdateMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28114,7 +28111,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setnewmc
+        m_MethodName: SetNewMC
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28779,7 +28776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &7463504043353591924
 BoxCollider:
   m_ObjectHideFlags: 0

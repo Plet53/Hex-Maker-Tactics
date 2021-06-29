@@ -693,7 +693,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setAVol
+        m_MethodName: SetAVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1282,7 +1282,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: loadProject
+        m_MethodName: LoadProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2112,7 +2112,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setCD
+        m_MethodName: SetCD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2124,7 +2124,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: updateText
+        m_MethodName: UpdateText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2709,7 +2709,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2885,7 +2885,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setMVol
+        m_MethodName: SetMVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3935,9 +3935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dfd34d5a8bc85438caa510c4be6e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smenu: {fileID: 511320174}
-  npmenu: {fileID: 1902459219}
-  lmenu: {fileID: 1661619980}
   lprje: {fileID: 1745019149}
   sliders:
   - {fileID: 652127991}
@@ -3945,7 +3942,6 @@ MonoBehaviour:
   - {fileID: 1211823999}
   - {fileID: 128748158}
   fs: {fileID: 1937204154}
-  filename: 
   creation: {fileID: 349289877}
   direcbox: {fileID: 1827106169}
   loadbox: {fileID: 575383020}
@@ -4620,7 +4616,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setFXVol
+        m_MethodName: SetFXVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4902,7 +4898,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: SetFilename
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4914,7 +4910,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: updateText
+        m_MethodName: UpdateText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5703,7 +5699,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: saveConfig
+        m_MethodName: SaveConfig
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6505,7 +6501,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6517,7 +6513,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: updateText
+        m_MethodName: UpdateText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6687,7 +6683,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: leave
+        m_MethodName: Leave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7127,7 +7123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setCD
+        m_MethodName: SetCD
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7139,7 +7135,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: updateText
+        m_MethodName: UpdateText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7582,7 +7578,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setMUVol
+        m_MethodName: SetMUVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7815,7 +7811,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: editNewProject
+        m_MethodName: EditNewProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8119,7 +8115,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setfilename
+        m_MethodName: set_filename
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
