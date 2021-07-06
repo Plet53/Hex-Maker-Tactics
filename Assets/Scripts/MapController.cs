@@ -167,16 +167,12 @@ public class MapController : MonoBehaviour{
   public void TempDeselect(GameObject pick){tempSelectList.Remove(pick);}
   //may change to graph traversal in engine
   public void SetRad(float r){rad = Mathf.FloorToInt(r);}
-  public void RadialSelect(){
-    RadialSelect(rad, selected, out tempSelectList);
-    FinalizeSelect();
-  }
   /* The principles within:
     Fundamentally speaking a Hexagon can be treated as 6 triangles, whose points converge on the center.
     This algorithm builds each of those triangles, bubbling out from the center.
     Note: There is an oversight where if the selection occurs near an edge, one of the triangles that should build doesn't
   */
-  public void RadialSelect(int radius, GameObject center, out List<GameObject> output){
+  public void TriangleSelect(int radius, GameObject center, out List<GameObject> output){
     output = new List<GameObject>();
     output.Add(center);
     List<GameObject> temp = new List<GameObject>();
@@ -195,8 +191,7 @@ public class MapController : MonoBehaviour{
     For each point in your inital collection, travel "outwards" from that point, and add those to a collection.
     For the last point in that collection, add an additional point that is "rightwards" from that point.
     Repeat the operation with the new collection.  */
-  List<GameObject> TriBuild(
-    byte dir, List<GameObject> buildFrom){
+  List<GameObject> TriBuild(byte dir, List<GameObject> buildFrom){
     List<GameObject> ret = new List<GameObject>();
     GameObject a = null;
     foreach(GameObject e in buildFrom){
@@ -209,7 +204,46 @@ public class MapController : MonoBehaviour{
     catch(System.ArgumentOutOfRangeException){}}
     return ret;
   }
-  //set tempselect, display selected tiles
+  public List<GameObject> RadialSelect(int radius, GameObject center){
+    List<GameObject> r = new List<GameObject>(), temp;
+    int i, j, k = 0, l;
+    byte d;
+    r.Add(center);
+    for(i = 0; i < radius; i++){
+      j = r.Count;
+      while(k < j){
+        if(!r[k].GetComponent<MapTileObject>().walk){
+          for(d = 0; d < 6; d++){
+            temp = r[k].GetComponent<MapTileObject>().Adjacent(d);
+            for(l = 0; l < temp.Count; l++){
+              if(!r.Contains(temp[l])){r.Add(temp[l]);
+            }}}
+          r[k].GetComponent<MapTileObject>().walk = true;
+        }
+      k++;
+    }}
+    foreach(GameObject e in r){e.GetComponent<MapTileObject>().walk = false;}
+    return r;
+  }
+  /*
+
+  public void RadialWalk(int radius, GameObject center, ref List<GameObject> output){
+    MapTileObject t = center.GetComponent<MapTileObject>();
+    List<GameObject> temp;
+    if(!t.walk){
+      t.walk = true;
+      output.Add(center);
+      if(radius > 0){
+        for(byte i = 0; i < 6; i++){
+          temp = t.Adjacent(i);
+          for(int j = 0; j < temp.Count; j++){
+            if(!temp[j].GetComponent<MapTileObject>().walk){
+              RadialWalk(radius - 1, temp[j], ref output);
+    }}}}}
+    t.walk = false;
+  }
+  */
+  //set multiselect from tempselect, display selected tiles
   //TODO: more interesting effect in game engine
   public void FinalizeSelect(){
     selector.SetActive(false);

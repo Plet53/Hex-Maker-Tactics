@@ -9,11 +9,11 @@ public class MapTileObject : MonoBehaviour
 {
   public ushort xVal, yVal, zVal;
   public byte rot;
-  public bool act;
+  public bool act, walk;
   //TODO: feels wasteful as of now, opinion might change further down the line
   public List<KeyValuePair<ushort, GameObject>> adjacencyTable;
   public Paint p;
-  public void Instantiate(ushort x, ushort y, ushort z, byte r, Paint paint, bool a){xVal = x; yVal = y; zVal = z; rot = r; act = a; this.ApplyPaint(paint);} 
+  public void Instantiate(ushort x, ushort y, ushort z, byte r, Paint paint, bool a){xVal = x; yVal = y; zVal = z; rot = r; act = a; this.ApplyPaint(paint); walk = false;} 
   void setAdjacent(int x, int z, ushort dir){
     try{adjacencyTable.Add(new KeyValuePair<ushort, GameObject>(dir, this.GetComponentInParent<MapController>().grid[x,z]));}
     catch(System.IndexOutOfRangeException){}

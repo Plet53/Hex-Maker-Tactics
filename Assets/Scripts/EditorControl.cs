@@ -207,7 +207,7 @@ public class EditorControl : MonoBehaviour
       }}}
       if(toolset[1]){selRect.SetActive(false); dispSelRect.SetActive(false); firstHit = false;}
       if(toolset[2]){
-        if(rad != 0){control.RadialSelect(rad, control.selected, out control.tempSelectList);}
+        if(rad != 0){control.tempSelectList = control.RadialSelect(rad, control.selected);}
         else{r = false;}}
       if(toolset[1] || (toolset[2] && r)){
         if(toolset[3]){if(Input.GetAxis("Modifier") == 0){control.ClearSelect(); control.FinalizeSelect();}
@@ -247,7 +247,8 @@ public class EditorControl : MonoBehaviour
           else{control.selected.GetComponent<MapTileObject>().RotLeft();}}}
       else{cam.GetComponent<Camera>().orthographicSize = 
         Mathf.Clamp(cam.GetComponent<Camera>().orthographicSize - 
-        (Input.mouseScrollDelta.y * 10 * ((Input.GetAxis("Modifier") > 0) ? 2 : (Input.GetAxis("Modifier") < 0) ? 0.5f : 1)),
+        (Input.mouseScrollDelta.y * 10 * 
+        ((Input.GetAxis("Modifier") > 0) ? 2 : (Input.GetAxis("Modifier") < 0) ? 0.5f : 1)),
         10,200);
         canvtogrid = (float)(cam.GetComponent<Camera>().orthographicSize / 400);}
       }
