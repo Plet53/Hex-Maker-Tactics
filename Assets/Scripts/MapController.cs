@@ -204,6 +204,8 @@ public class MapController : MonoBehaviour{
     catch(System.ArgumentOutOfRangeException){}}
     return ret;
   }
+  //Since everything tracks its own set of neighbors, we can rely on them to find paths to each other one.
+  //Even around corners, when it comes to that.
   public List<GameObject> RadialSelect(int radius, GameObject center){
     List<GameObject> r = new List<GameObject>(), temp;
     int i, j, k = 0, l;
@@ -226,7 +228,7 @@ public class MapController : MonoBehaviour{
     return r;
   }
   /*
-
+  Attempting a depth-first, recursive type search has lead to problems.
   public void RadialWalk(int radius, GameObject center, ref List<GameObject> output){
     MapTileObject t = center.GetComponent<MapTileObject>();
     List<GameObject> temp;
