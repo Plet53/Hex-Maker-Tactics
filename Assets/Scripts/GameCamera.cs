@@ -12,7 +12,7 @@ public class GameCamera : MonoBehaviour{
   public byte currCam;
   public bool u;
   #endregion
-  void Start(){
+  void Start() {
     //Position of the camera when pointing in any given direction
     points = new GameObject[6];
     //Distance and direction in which camera shifts
@@ -25,7 +25,7 @@ public class GameCamera : MonoBehaviour{
     float xAngle = 0;
     float zAngle = 0;
     //Initialize the structures above
-    for (int i = 0; i < 6; i++){
+    for (int i = 0; i < 6; i++) {
       xAngle = Mathf.Sin(Mathf.Deg2Rad * angle);
       zAngle = Mathf.Cos(Mathf.Deg2Rad * angle);
       fbdirections[i] = new Vector3(xAngle, 0, zAngle);
@@ -41,25 +41,29 @@ public class GameCamera : MonoBehaviour{
     cam.transform.rotation = points[3].transform.rotation;
   }
   //Camera controls
-  void Update(){
-    if(Input.GetAxis("Horizontal") < 0){
+  void Update() {
+    if (Input.GetAxis("Horizontal") < 0) {
       currCam = (byte)((currCam + 1) % 6);
-      if(u){cam.transform.rotation = Quaternion.Euler(90, points[currCam].transform.rotation.eulerAngles.y,0);}
-      else{cam.transform.position = points[currCam].transform.position;
-      cam.transform.rotation = points[currCam].transform.rotation;
-    }}
-    if(Input.GetAxis("Horizontal") > 0)
-      {currCam = (byte)((currCam + 5) % 6);
-      if(u){cam.transform.rotation = Quaternion.Euler(90, points[currCam].transform.rotation.eulerAngles.y,0);}
-      else{cam.transform.position = points[currCam].transform.position;
-      cam.transform.rotation = points[currCam].transform.rotation;
-    }}
-    if(Input.GetAxis("Vertical") < 0){
+      if (u) cam.transform.rotation = Quaternion.Euler(90, points[currCam].transform.rotation.eulerAngles.y,0);
+      else {
+        cam.transform.position = points[currCam].transform.position;
+        cam.transform.rotation = points[currCam].transform.rotation;
+      }
+    }
+    if (Input.GetAxis("Horizontal") > 0) {
+      currCam = (byte)((currCam + 5) % 6);
+      if (u) cam.transform.rotation = Quaternion.Euler(90, points[currCam].transform.rotation.eulerAngles.y,0);
+      else { 
+        cam.transform.position = points[currCam].transform.position;
+        cam.transform.rotation = points[currCam].transform.rotation;
+      }
+    }
+    if(Input.GetAxis("Vertical") < 0) {
       u = false;
       cam.transform.position = points[currCam].transform.position;
       cam.transform.rotation = points[currCam].transform.rotation;
     }
-    if(Input.GetAxis("Vertical") > 0){
+    if(Input.GetAxis("Vertical") > 0) {
       u = true;
       cam.transform.position = this.gameObject.transform.position;
       cam.transform.rotation = Quaternion.Euler(90, cam.transform.rotation.eulerAngles.y ,0);

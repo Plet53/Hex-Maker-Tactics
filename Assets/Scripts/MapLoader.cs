@@ -19,7 +19,7 @@ public class MapLoader : MonoBehaviour{
   public EditorControl e;
   #endregion
   //load in the editor
-  public IEnumerator ELoad(string path){
+  public IEnumerator ELoad(string path) {
     loadmenu.SetActive(false);
     m = GetComponentInParent<MapController>();
     FileStream file = new FileStream(path, FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite); 
@@ -48,20 +48,20 @@ public class MapLoader : MonoBehaviour{
     zPos = 0;
     zShift = (m.scale * sin60 * 2f);
     m.fbShift = zShift;
-    for(int j = 0; j < m.map.xLen; j++){
+    for (int j = 0; j < m.map.xLen; j++) {
       zPos = (j % 2 == 0) ? 0 : m.scale * sin60;
-      for(int k = 0; k < zLen; k++){
-        if(m.map.grid[j,k] == null){BlankTile((ushort)j,(ushort)k);}
-        else{
+      for (int k = 0; k < zLen; k++) {
+        if (m.map.grid[j,k] == null) BlankTile((ushort)j,(ushort)k);
+        else {
           NewTileE(
-          (ushort)j,
-          m.map.grid[j,k].yVal,
-          (ushort)k,
-          m.map.grid[j,k].rot,
-          m.map.grid[j,k].paintindex,
-          true);
+            (ushort)j,
+            m.map.grid[j,k].yVal,
+            (ushort)k,
+            m.map.grid[j,k].rot,
+            m.map.grid[j,k].paintindex,
+            true);
         }
-        zPos += zShift;
+      zPos += zShift;
       }
     xPos += xShift;
     }
@@ -73,7 +73,7 @@ public class MapLoader : MonoBehaviour{
     yield break;
   }
   //load in engine
-  public IEnumerator GLoad(string path){
+  public IEnumerator GLoad(string path) {
     m = GetComponentInParent<MapController>();
     FileStream file = new FileStream(path, FileMode.Open);
     ValueTask<HMp> t = JsonSerializer.DeserializeAsync<HMp>(file);
@@ -83,37 +83,47 @@ public class MapLoader : MonoBehaviour{
     int zLen = m.map.grid.Length / m.map.xLen;
     m.grid =  new GameObject[m.map.xLen,zLen];
     m.palette.Clear();
-    for(int j = 0; j < m.map.xLen; j++){
-      for(int k = 0; k < m.map.grid.Length/m.map.xLen;k++){
-        if(m.map.grid[j,k] != null){try{
-          NewTileG(
-            (ushort)j,
-            m.map.grid[j,k].yVal,
-            (ushort)k,
-            m.map.grid[j,k].rot,
-            m.map.grid[j,k].paintindex,
-            true);
-        }
+    for (int j = 0; j < m.map.xLen; j++) {
+      for (int k = 0; k < m.map.grid.Length/m.map.xLen;k++) {
+        if (m.map.grid[j,k] != null) {
+          try {
+            NewTileG(
+              (ushort)j,
+              m.map.grid[j,k].yVal,
+              (ushort)k,
+              m.map.grid[j,k].rot,
+              m.map.grid[j,k].paintindex,
+              true);
+          }
         catch(Exception e){Console.Write(e);}}
-      }} 
+      }
+    } 
     yield break;
   }
-  public void NewTileE(ushort x, ushort y, ushort z, byte r, int p, bool a){
+  public void NewTileE(ushort x, ushort y, ushort z, byte r, int p, bool a) {
     MapTileObject hex;
     GameObject cell;
-    cell = Instantiate<GameObject>(hextile, new Vector3(xPos, y * (m.scale / 2), zPos), Quaternion.Euler(-90,0,r*60), m.transform);
+    cell = Instantiate<GameObject>(
+      hextile, 
+      new Vector3(xPos, y * (m.scale / 2), zPos), 
+      Quaternion.Euler(-90,0,r*60), 
+      m.transform);
     cell.transform.localScale = m.scalevec;
     maxheight = Mathf.Max(maxheight, cell.transform.position.y);
     m.grid[x,z] = cell;
     hex = cell.GetComponent<MapTileObject>();
-    try{temp = e.palette[p];}
-    catch(System.IndexOutOfRangeException){temp = d;}
+    try {temp = e.palette[p];}
+    catch(System.IndexOutOfRangeException) {temp = d;}
     hex.Instantiate(x,y,z,r,temp,a);
   }
-  public void NewTileG(ushort x, ushort y, ushort z, byte r, int p, bool a){
+  public void NewTileG(ushort x, ushort y, ushort z, byte r, int p, bool a) {
     MapTileObject hex;
     GameObject cell;
-    cell = Instantiate<GameObject>(hextile, new Vector3(xPos, y * (m.scale / 2), zPos), Quaternion.Euler(-90,0,r*60), m.transform);
+    cell = Instantiate<GameObject>(
+      hextile,
+      new Vector3(xPos, y * (m.scale / 2), zPos), 
+      Quaternion.Euler(-90,0,r*60), 
+      m.transform);
     cell.transform.localScale = m.scalevec;
     maxheight = Mathf.Max(maxheight, cell.transform.position.y);
     m.grid[x,z] = cell;
@@ -121,10 +131,13 @@ public class MapLoader : MonoBehaviour{
     //search mapcontroller palette for relevant paint, otherwise load
     hex.Instantiate(x,y,z,r,temp,a);
   }
-  public void BlankTile(ushort x, ushort z){
+  public void BlankTile(ushort x, ushort z) {
     MapTileObject hex;
     GameObject cell;
-    cell = Instantiate<GameObject>(hextile, new Vector3(xPos,0, zPos), Quaternion.Euler(-90,0,0), m.transform);
+    cell = Instantiate<GameObject>(
+      hextile, 
+      new Vector3(xPos,0, zPos), 
+      Quaternion.Euler(-90,0,0), m.transform);
     cell.transform.localScale = m.scalevec;
     m.grid[x,z] = cell;
     hex = cell.GetComponent<MapTileObject>();
@@ -132,7 +145,7 @@ public class MapLoader : MonoBehaviour{
     m.Remove(cell);
   }
   //exists for engine, not currently used
-  public IEnumerator LoadPaint(int index){
+  public IEnumerator LoadPaint(int index) {
     FileStream file = new FileStream(m.dc.direc + "paints/" + index + ".pnt", FileMode.Open, FileAccess.Read, FileShare.Read);
     ValueTask<Paint> tp = JsonSerializer.DeserializeAsync<Paint>(file);
     yield return new WaitUntil(() => tp.IsCompleted);

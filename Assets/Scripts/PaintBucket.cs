@@ -13,12 +13,15 @@ public class PaintBucket : MonoBehaviour
   public RawImage image;
   //instantiated in unity editor, essentially ints that point to the bottom left corner of the preview image
   public Vector2Int[] frames;
-  public void SetFrame(int i)
-    {Graphics.CopyTexture(preview,0,0,frames[i].x,frames[i].y,40,36,copy,0,0,0,0);}
-  public void SetPaintE(){e.paint = e.palette[index];}
+  public void SetFrame(int i) {
+    Graphics.CopyTexture(preview,0,0,frames[i].x,frames[i].y,40,36,copy,0,0,0,0);
+  }
+  public void SetPaintE() {e.paint = e.palette[index];}
   //TODO: variable flag count for individual projects
   //always % 8 though, fullbytes only
-  public void DispFlags(){for(int i = 0; i < e.palette[index].flagset.Length; i++){
+  public void DispFlags() {
+    for (int i = 0; i < e.palette[index].flagset.Length; i++) {
     flags[i].SetActive(e.palette[index].flagset[i]);
-  }}
+    }
+  }
 }

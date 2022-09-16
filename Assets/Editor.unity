@@ -902,7 +902,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setCD
+        m_MethodName: SetCD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -914,7 +914,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateMenus
+        m_MethodName: UpdateMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6768,7 +6768,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateMenus
+        m_MethodName: UpdateMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9840,7 +9840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Load Map
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11436,7 +11436,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: leave
+        m_MethodName: Leave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14759,7 +14759,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: makeNewPrj
+        m_MethodName: MakeNewPrj
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19234,7 +19234,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: setCD
+        m_MethodName: SetCD
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19246,7 +19246,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 626442519}
         m_TargetAssemblyTypeName: EditorControl, Assembly-CSharp
-        m_MethodName: updateMenus
+        m_MethodName: UpdateMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

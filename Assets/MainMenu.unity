@@ -7715,7 +7715,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046260673}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: setFS
+        m_MethodName: SetFS
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

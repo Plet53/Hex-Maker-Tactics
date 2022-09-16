@@ -5,10 +5,10 @@ using UnityEngine;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace HMTac{
+namespace HMTac {
   [JsonConverter(typeof(PaintJSONConverter))]
-  public class Paint
-   { //stored here to return to after given effects, such as selection display or spells in game
+  public class Paint {
+     //stored here to return to after given effects, such as selection display or spells in game
     public Material mat;
     //flags have no inherent purpose, use as you see fit
     public BitArray flagset;
@@ -17,32 +17,35 @@ namespace HMTac{
     //paints are stored elsewhere as an index
     public int index;
     public string name;
-    public override string ToString()
-    {return "name: " + name +
-            "material: " + mat.ToString() +
-            "\nflags: " + FlagsToString();}
+    public override string ToString() {
+      return "name: " + name +
+             "material: " + mat.ToString() +
+             "\nflags: " + FlagsToString();
+    }
     //helpers for serialization
-    public string FlagsToString(){
+    public string FlagsToString() {
       char[] r = new char[flagset.Length];
-      for(int i = 0; i < flagset.Length; i++){r[i] = flagset[i] ? '1' : '0';}
+      for (int i = 0; i < flagset.Length; i++) r[i] = flagset[i] ? '1' : '0';
       return new string(r);
     }
-    public void StringToFlags(string s){
+    public void StringToFlags(string s) {
       flagset = new BitArray(s.Length, false);
       char[] c = s.ToCharArray();
-      for(int i = 0; i < flagset.Length; i++){try{flagset[i] = (c[i] == '1') ? true : false;}
-      catch(System.IndexOutOfRangeException){}}
+      for (int i = 0; i < flagset.Length; i++) {
+        try{flagset[i] = (c[i] == '1') ? true : false;}
+        catch(System.IndexOutOfRangeException){}
+      }
     }
   }
   //does not have a converter, this object only exists for the purposes of saving information from the main grid
-  public class Cell{
+  public class Cell {
     public ushort yVal;
     byte r;
     public byte rot {get {return r;} set {r = (byte)((int)value % 6);}}
     public int paintindex;
   }
   [JsonConverter(typeof(ProjectJSONConverter))]
-  public struct Prj{
+  public struct Prj {
     public string name;
     //names are here for things being referenced elsewhere
     public string[] names;
@@ -51,7 +54,7 @@ namespace HMTac{
     public bool wm;
   }
   [JsonConverter(typeof(HexMapJSONConverter))]
-  public struct HMp{
+  public struct HMp {
     public Cell[,] grid;
     //nullable to allow for non-rectangular maps, should save memory
     public ushort xLen;
@@ -61,7 +64,7 @@ namespace HMTac{
   }
   [JsonConverter(typeof(OptionsJsonConverter))]
   //sound isn't implemented yet, this is here for that
-  public class Options{
+  public class Options {
     //master, music, sound effects, ambient tracks (bird chirp, rain, etc.)
     float m,mu,fx,a;
     //fullscreen
@@ -70,13 +73,13 @@ namespace HMTac{
     public float muVol{get {return mu;} set {mu = Mathf.Clamp(value, 0, 2f);}}
     public float fxVol{get {return fx;} set {fx = Mathf.Clamp(value, 0, 2f);}}
     public float aVol{get {return a;} set {a = Mathf.Clamp(value, 0, 2f);}}
-    public void setVols(float[] f){m  = f[0]; fx = f[1]; mu = f[2]; a = f[3];}
-    public void setVols(){m = 1f; fx = 1f; mu = 1f; a = 1f;}}
+    public void setVols(float[] f) {m  = f[0]; fx = f[1]; mu = f[2]; a = f[3];}
+    public void setVols() {m = 1f; fx = 1f; mu = 1f; a = 1f;}}
   //I accept that the way I have implemented these is, perhaps, inelegant
   //But it works
   //Maybe the default json writer/reader's methods should skip over startobject/array, howboutthat
-  public class PaintJSONConverter : JsonConverter<Paint>{
-    public override Paint Read(ref Utf8JsonReader r, Type T, JsonSerializerOptions j){
+  public class PaintJSONConverter : JsonConverter<Paint> {
+    public override Paint Read(ref Utf8JsonReader r, Type T, JsonSerializerOptions j) {
       Paint p = new Paint();
       p.mat = null; //re-instantiate materials at runtime
       r.Read(); r.Read();
@@ -98,7 +101,7 @@ namespace HMTac{
       r.Read(); r.Read();
       return p;
     }
-    public override void Write(Utf8JsonWriter w, Paint p, JsonSerializerOptions j){
+    public override void Write(Utf8JsonWriter w, Paint p, JsonSerializerOptions j) {
       w.WriteStartObject();
       w.WriteString("name",p.name);
       w.WriteString("flags",p.FlagsToString());
@@ -112,8 +115,8 @@ namespace HMTac{
       w.WriteEndObject();
     }
   }
-  public class ProjectJSONConverter : JsonConverter<Prj>{
-    public override Prj Read(ref Utf8JsonReader r, Type T, JsonSerializerOptions j){
+  public class ProjectJSONConverter : JsonConverter<Prj> {
+    public override Prj Read(ref Utf8JsonReader r, Type T, JsonSerializerOptions j) {
       Prj p = new Prj();
       r.Read(); r.Read();
       p.name = r.GetString();
@@ -132,12 +135,13 @@ namespace HMTac{
       p.wm = r.GetBoolean();
       r.Read(); r.Read();
       return p;
-      }
-    public override void Write(Utf8JsonWriter w, Prj p, JsonSerializerOptions j){w.WriteStartObject();
+    }
+    public override void Write(Utf8JsonWriter w, Prj p, JsonSerializerOptions j) {
+      w.WriteStartObject();
       w.WriteString("name",p.name);
       w.WriteNumber("map count",p.mapcount);
       w.WriteStartArray("map names");
-      for(int i = 0; i < p.names.Length; i++){w.WriteStringValue(p.names[i]);}
+      for (int i = 0; i < p.names.Length; i++) w.WriteStringValue(p.names[i]);
       w.WriteEndArray();
       w.WriteNumber("paint count",p.palettelen);
       w.WriteNumber("last map",p.lastmap);
@@ -145,9 +149,9 @@ namespace HMTac{
       w.WriteEndObject();
     }
   }
-  public class HexMapJSONConverter : JsonConverter<HMp>{
+  public class HexMapJSONConverter : JsonConverter<HMp> {
     public override bool HandleNull => true;
-    public override HMp Read(ref Utf8JsonReader r, Type T, JsonSerializerOptions j){
+    public override HMp Read(ref Utf8JsonReader r, Type T, JsonSerializerOptions j) {
       HMp h = new HMp();
       r.Read(); r.Read();
       ushort a = r.GetUInt16();
@@ -182,24 +186,27 @@ namespace HMTac{
       r.Read(); r.Read();*/
       return h;
     }
-    public override void Write(Utf8JsonWriter w, HMp h, JsonSerializerOptions j){
+    public override void Write(Utf8JsonWriter w, HMp h, JsonSerializerOptions j) {
       int len = h.grid.Length / h.xLen;
       w.WriteStartObject();
       w.WriteNumber("width",h.xLen);
       w.WriteNumber("length",len);
       w.WriteStartArray("grid");
-      for(int a = 0; a < h.xLen; a++){
+      for(int a = 0; a < h.xLen; a++) {
         w.WriteStartArray();
-        for(int b = 0; b < len; b++){
+        for(int b = 0; b < len; b++) {
           w.WriteStartObject();
-          if(h.grid[a,b] == null){w.WriteNull("o");}
-          else{
+          if (h.grid[a,b] == null) w.WriteNull("o");
+          else {
             Cell c = (Cell)h.grid[a,b];
             w.WriteNumber("yVal",c.yVal);
             w.WriteNumber("Rot",c.rot);
-            w.WriteNumber("Paint",c.paintindex);}
-          w.WriteEndObject();}
-        w.WriteEndArray();}
+            w.WriteNumber("Paint",c.paintindex);
+          }
+          w.WriteEndObject();
+        }
+        w.WriteEndArray();
+      }
       w.WriteEndArray();
     /*TODO: an implementation for objects outside of the grid
     w.WriteStartArray("extras");
@@ -210,8 +217,8 @@ namespace HMTac{
     w.WriteEndObject();
     }
   }
-  public class OptionsJsonConverter : JsonConverter<Options>{
-    public override Options Read(ref Utf8JsonReader r, Type t, JsonSerializerOptions j){
+  public class OptionsJsonConverter : JsonConverter<Options> {
+    public override Options Read(ref Utf8JsonReader r, Type t, JsonSerializerOptions j) {
       Options o =  new Options();
       r.Read(); r.Read();
       o.f = r.GetBoolean();
@@ -226,7 +233,7 @@ namespace HMTac{
       r.Read(); r.Read();
       return o;
     }
-    public override void Write(Utf8JsonWriter w, Options o, JsonSerializerOptions j){
+    public override void Write(Utf8JsonWriter w, Options o, JsonSerializerOptions j) {
       w.WriteStartObject();
       w.WriteBoolean("fs",o.f);
       w.WriteStartArray("volumes");
@@ -238,12 +245,14 @@ namespace HMTac{
       w.WriteEndObject();
     }
   }
-public class OutputCoroutine<T>{ //look I'm going to need this a lot, might as well put it here
+public class OutputCoroutine<T> { //look I'm going to need this a lot, might as well put it here
   public Coroutine c;
   public T r;
   private IEnumerator<T> t;
-  public OutputCoroutine(MonoBehaviour o, IEnumerator<T> t){this.t = t;
-    this.c = o.StartCoroutine(Run());}
-  private IEnumerator<T> Run(){while(t.MoveNext()){r = t.Current; yield return r;}}
+  public OutputCoroutine(MonoBehaviour o, IEnumerator<T> t) {
+    this.t = t;
+    this.c = o.StartCoroutine(Run());
+  }
+  private IEnumerator<T> Run() {while(t.MoveNext()){r = t.Current; yield return r;}}
   }
 }
